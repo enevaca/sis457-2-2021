@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DemoConsoleAvanzado
@@ -45,8 +46,8 @@ namespace DemoConsoleAvanzado
             gAvion.campo = new Avion();
 
             // Delegado
-            //Delegado delegado = new Delegado();
-            //string cadenaVolcada = delegado.volcarCadena("hola");
+            Reverse rev = volcarCadena;
+            Console.WriteLine(rev("hola"));
 
             Func<int, int, int> multiplicacion = (v1, v2) => v1 * v2;
             int valor = multiplicacion(3, 2);
@@ -58,6 +59,12 @@ namespace DemoConsoleAvanzado
 
             Console.WriteLine("Hola Mundo");
             Console.ReadLine();
+        }
+
+        public delegate string Reverse(string s);
+        static string volcarCadena(string s)
+        {
+            return new string(s.Reverse().ToArray());
         }
 
         public static async void testAsycAwaitMethod() {
