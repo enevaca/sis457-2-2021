@@ -1,0 +1,16 @@
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.exe
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.deps.json
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.runtimeconfig.json
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.runtimeconfig.dev.json
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.dll
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\ref\DemoConsoleAvanzado.dll
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\bin\Debug\net5.0\DemoConsoleAvanzado.pdb
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.csproj.AssemblyReference.cache
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.GeneratedMSBuildEditorConfig.editorconfig
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.AssemblyInfoInputs.cache
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.AssemblyInfo.cs
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.csproj.CoreCompileInputs.cache
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.dll
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\ref\DemoConsoleAvanzado.dll
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.pdb
+D:\informatica\sis457-2-2020\Demo\DemoConsoleAvanzado\obj\Debug\net5.0\DemoConsoleAvanzado.genruntimeconfig.cache
