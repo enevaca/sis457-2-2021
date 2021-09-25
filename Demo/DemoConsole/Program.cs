@@ -7,7 +7,7 @@ namespace DemoConsole
     {
         static void Main(string[] args)
         {
-            // POO (esto lo hicimos al final)
+            // POO (esto lo hicimos al final) 
             Persona persona = new Persona("123456");
             persona.nombres = "Juan";
             persona.primerApellido = "Perez";
