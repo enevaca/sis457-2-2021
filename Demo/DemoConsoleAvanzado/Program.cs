@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryNetStandard;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,6 +9,10 @@ namespace DemoConsoleAvanzado
     {
         static void Main(string[] args)
         {
+            // Librería
+            int result = Calculadora.multiplicar(5, 6);
+            Console.WriteLine($"El resultado es: {result}");
+
             //testAsycAwaitMethod();
 
             // Manejo de excepciones

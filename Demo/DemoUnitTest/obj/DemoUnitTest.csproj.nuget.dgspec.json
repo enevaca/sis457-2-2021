@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\informatica\\sis457-2-2020\\Demo\\DemoConsoleAvanzado\\DemoConsoleAvanzado.csproj": {}
+    "D:\\informatica\\sis457-2-2020\\Demo\\DemoUnitTest\\DemoUnitTest.csproj": {}
   },
   "projects": {
     "D:\\informatica\\sis457-2-2020\\Demo\\ClassLibraryNetStandard\\ClassLibraryNetStandard.csproj": {
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\informatica\\sis457-2-2020\\Demo\\DemoConsoleAvanzado\\DemoConsoleAvanzado.csproj": {
+    "D:\\informatica\\sis457-2-2020\\Demo\\DemoUnitTest\\DemoUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\informatica\\sis457-2-2020\\Demo\\DemoConsoleAvanzado\\DemoConsoleAvanzado.csproj",
-        "projectName": "DemoConsoleAvanzado",
-        "projectPath": "D:\\informatica\\sis457-2-2020\\Demo\\DemoConsoleAvanzado\\DemoConsoleAvanzado.csproj",
+        "projectUniqueName": "D:\\informatica\\sis457-2-2020\\Demo\\DemoUnitTest\\DemoUnitTest.csproj",
+        "projectName": "DemoUnitTest",
+        "projectPath": "D:\\informatica\\sis457-2-2020\\Demo\\DemoUnitTest\\DemoUnitTest.csproj",
         "packagesPath": "C:\\Users\\Noel\\.nuget\\packages\\",
-        "outputPath": "D:\\informatica\\sis457-2-2020\\Demo\\DemoConsoleAvanzado\\obj\\",
+        "outputPath": "D:\\informatica\\sis457-2-2020\\Demo\\DemoUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -105,6 +105,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
