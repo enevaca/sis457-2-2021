@@ -32,28 +32,28 @@ namespace CpMinervaDesktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.c1Ribbon1 = new C1.Win.C1Ribbon.C1Ribbon();
             this.ribbonApplicationMenu1 = new C1.Win.C1Ribbon.RibbonApplicationMenu();
-            this.ribbonQat1 = new C1.Win.C1Ribbon.RibbonQat();
-            this.ribbonConfigToolBar1 = new C1.Win.C1Ribbon.RibbonConfigToolBar();
-            this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
             this.ribbonBottomToolBar1 = new C1.Win.C1Ribbon.RibbonBottomToolBar();
+            this.ribbonConfigToolBar1 = new C1.Win.C1Ribbon.RibbonConfigToolBar();
+            this.ribbonQat1 = new C1.Win.C1Ribbon.RibbonQat();
             this.ribbonTab1 = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup1 = new C1.Win.C1Ribbon.RibbonGroup();
-            this.ribbonTab2 = new C1.Win.C1Ribbon.RibbonTab();
-            this.ribbonGroup2 = new C1.Win.C1Ribbon.RibbonGroup();
-            this.ribbonTab3 = new C1.Win.C1Ribbon.RibbonTab();
-            this.ribbonGroup3 = new C1.Win.C1Ribbon.RibbonGroup();
-            this.ribbonTab4 = new C1.Win.C1Ribbon.RibbonTab();
-            this.ribbonGroup4 = new C1.Win.C1Ribbon.RibbonGroup();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaProducto = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaProveedor = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaCliente = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonTab2 = new C1.Win.C1Ribbon.RibbonTab();
+            this.ribbonGroup2 = new C1.Win.C1Ribbon.RibbonGroup();
             this.btnMoCompra = new C1.Win.C1Ribbon.RibbonButton();
             this.btnMoCaja = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonTab3 = new C1.Win.C1Ribbon.RibbonTab();
+            this.ribbonGroup3 = new C1.Win.C1Ribbon.RibbonGroup();
             this.btnAdUsuario = new C1.Win.C1Ribbon.RibbonButton();
             this.btnAdEmpleado = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonTab4 = new C1.Win.C1Ribbon.RibbonTab();
+            this.ribbonGroup4 = new C1.Win.C1Ribbon.RibbonGroup();
             this.ribbonButton8 = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonButton9 = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,9 +65,10 @@ namespace CpMinervaDesktop
             this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(808, 156);
+            this.c1Ribbon1.Size = new System.Drawing.Size(1077, 194);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
@@ -79,21 +80,17 @@ namespace CpMinervaDesktop
             // 
             this.ribbonApplicationMenu1.Name = "ribbonApplicationMenu1";
             // 
-            // ribbonQat1
+            // ribbonBottomToolBar1
             // 
-            this.ribbonQat1.Name = "ribbonQat1";
+            this.ribbonBottomToolBar1.Name = "ribbonBottomToolBar1";
             // 
             // ribbonConfigToolBar1
             // 
             this.ribbonConfigToolBar1.Name = "ribbonConfigToolBar1";
             // 
-            // ribbonTopToolBar1
+            // ribbonQat1
             // 
-            this.ribbonTopToolBar1.Name = "ribbonTopToolBar1";
-            // 
-            // ribbonBottomToolBar1
-            // 
-            this.ribbonBottomToolBar1.Name = "ribbonBottomToolBar1";
+            this.ribbonQat1.Name = "ribbonQat1";
             // 
             // ribbonTab1
             // 
@@ -109,59 +106,6 @@ namespace CpMinervaDesktop
             this.ribbonGroup1.LauncherToolTip = "Catálogos Generales";
             this.ribbonGroup1.Name = "ribbonGroup1";
             this.ribbonGroup1.Text = "General";
-            // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Groups.Add(this.ribbonGroup2);
-            this.ribbonTab2.Name = "ribbonTab2";
-            this.ribbonTab2.Text = "Movimientos";
-            // 
-            // ribbonGroup2
-            // 
-            this.ribbonGroup2.Items.Add(this.btnMoCompra);
-            this.ribbonGroup2.Items.Add(this.btnMoCaja);
-            this.ribbonGroup2.LauncherToolTip = "Compras y Ventas";
-            this.ribbonGroup2.Name = "ribbonGroup2";
-            this.ribbonGroup2.Text = "Compras y Ventas";
-            // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Groups.Add(this.ribbonGroup3);
-            this.ribbonTab3.Name = "ribbonTab3";
-            this.ribbonTab3.Text = "Administración";
-            // 
-            // ribbonGroup3
-            // 
-            this.ribbonGroup3.Items.Add(this.btnAdUsuario);
-            this.ribbonGroup3.Items.Add(this.btnAdEmpleado);
-            this.ribbonGroup3.LauncherToolTip = "Administración";
-            this.ribbonGroup3.Name = "ribbonGroup3";
-            this.ribbonGroup3.Text = "Administración";
-            // 
-            // ribbonTab4
-            // 
-            this.ribbonTab4.Groups.Add(this.ribbonGroup4);
-            this.ribbonTab4.Name = "ribbonTab4";
-            this.ribbonTab4.Text = "Ayuda";
-            // 
-            // ribbonGroup4
-            // 
-            this.ribbonGroup4.Items.Add(this.ribbonButton8);
-            this.ribbonGroup4.Items.Add(this.ribbonButton9);
-            this.ribbonGroup4.LauncherToolTip = "Ayuda";
-            this.ribbonGroup4.Name = "ribbonGroup4";
-            this.ribbonGroup4.Text = "Ayuda";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::CpMinervaDesktop.Properties.Resources.principal;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(808, 354);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCaProducto
             // 
@@ -188,6 +132,20 @@ namespace CpMinervaDesktop
             this.btnCaCliente.Text = "Clientes";
             this.btnCaCliente.ToolTip = "Gestión de Clientes";
             // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Groups.Add(this.ribbonGroup2);
+            this.ribbonTab2.Name = "ribbonTab2";
+            this.ribbonTab2.Text = "Movimientos";
+            // 
+            // ribbonGroup2
+            // 
+            this.ribbonGroup2.Items.Add(this.btnMoCompra);
+            this.ribbonGroup2.Items.Add(this.btnMoCaja);
+            this.ribbonGroup2.LauncherToolTip = "Compras y Ventas";
+            this.ribbonGroup2.Name = "ribbonGroup2";
+            this.ribbonGroup2.Text = "Compras y Ventas";
+            // 
             // btnMoCompra
             // 
             this.btnMoCompra.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMoCompra.LargeImage")));
@@ -203,6 +161,20 @@ namespace CpMinervaDesktop
             this.btnMoCaja.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnMoCaja.SmallImage")));
             this.btnMoCaja.Text = "Caja";
             this.btnMoCaja.ToolTip = "Atención en Cajas";
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Groups.Add(this.ribbonGroup3);
+            this.ribbonTab3.Name = "ribbonTab3";
+            this.ribbonTab3.Text = "Administración";
+            // 
+            // ribbonGroup3
+            // 
+            this.ribbonGroup3.Items.Add(this.btnAdUsuario);
+            this.ribbonGroup3.Items.Add(this.btnAdEmpleado);
+            this.ribbonGroup3.LauncherToolTip = "Administración";
+            this.ribbonGroup3.Name = "ribbonGroup3";
+            this.ribbonGroup3.Text = "Administración";
             // 
             // btnAdUsuario
             // 
@@ -220,6 +192,20 @@ namespace CpMinervaDesktop
             this.btnAdEmpleado.Text = "Empleados";
             this.btnAdEmpleado.ToolTip = "Gestión de Empleados";
             // 
+            // ribbonTab4
+            // 
+            this.ribbonTab4.Groups.Add(this.ribbonGroup4);
+            this.ribbonTab4.Name = "ribbonTab4";
+            this.ribbonTab4.Text = "Ayuda";
+            // 
+            // ribbonGroup4
+            // 
+            this.ribbonGroup4.Items.Add(this.ribbonButton8);
+            this.ribbonGroup4.Items.Add(this.ribbonButton9);
+            this.ribbonGroup4.LauncherToolTip = "Ayuda";
+            this.ribbonGroup4.Name = "ribbonGroup4";
+            this.ribbonGroup4.Text = "Ayuda";
+            // 
             // ribbonButton8
             // 
             this.ribbonButton8.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.LargeImage")));
@@ -235,14 +221,31 @@ namespace CpMinervaDesktop
             this.ribbonButton9.Text = "Acerca De";
             this.ribbonButton9.ToolTip = "Acerca De";
             // 
+            // ribbonTopToolBar1
+            // 
+            this.ribbonTopToolBar1.Name = "ribbonTopToolBar1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CpMinervaDesktop.Properties.Resources.principal;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 194);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1077, 434);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 510);
+            this.ClientSize = new System.Drawing.Size(1077, 628);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Principal - Minerva :::";
