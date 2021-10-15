@@ -35,20 +35,20 @@ namespace CpMinervaDesktop
             this.ribbonBottomToolBar1 = new C1.Win.C1Ribbon.RibbonBottomToolBar();
             this.ribbonConfigToolBar1 = new C1.Win.C1Ribbon.RibbonConfigToolBar();
             this.ribbonQat1 = new C1.Win.C1Ribbon.RibbonQat();
-            this.ribbonTab1 = new C1.Win.C1Ribbon.RibbonTab();
+            this.tabCatalogos = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup1 = new C1.Win.C1Ribbon.RibbonGroup();
             this.btnCaProducto = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaProveedor = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaCliente = new C1.Win.C1Ribbon.RibbonButton();
-            this.ribbonTab2 = new C1.Win.C1Ribbon.RibbonTab();
+            this.tabMovimientos = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup2 = new C1.Win.C1Ribbon.RibbonGroup();
             this.btnMoCompra = new C1.Win.C1Ribbon.RibbonButton();
             this.btnMoCaja = new C1.Win.C1Ribbon.RibbonButton();
-            this.ribbonTab3 = new C1.Win.C1Ribbon.RibbonTab();
+            this.tabAdministracion = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup3 = new C1.Win.C1Ribbon.RibbonGroup();
             this.btnAdUsuario = new C1.Win.C1Ribbon.RibbonButton();
             this.btnAdEmpleado = new C1.Win.C1Ribbon.RibbonButton();
-            this.ribbonTab4 = new C1.Win.C1Ribbon.RibbonTab();
+            this.tabAyuda = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup4 = new C1.Win.C1Ribbon.RibbonGroup();
             this.ribbonButton8 = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonButton9 = new C1.Win.C1Ribbon.RibbonButton();
@@ -65,14 +65,14 @@ namespace CpMinervaDesktop
             this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
             this.c1Ribbon1.Size = new System.Drawing.Size(1077, 194);
-            this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
-            this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
-            this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
-            this.c1Ribbon1.Tabs.Add(this.ribbonTab4);
+            this.c1Ribbon1.Tabs.Add(this.tabCatalogos);
+            this.c1Ribbon1.Tabs.Add(this.tabMovimientos);
+            this.c1Ribbon1.Tabs.Add(this.tabAdministracion);
+            this.c1Ribbon1.Tabs.Add(this.tabAyuda);
             this.c1Ribbon1.TopToolBarHolder = this.ribbonTopToolBar1;
             this.c1Ribbon1.VisualStyle = C1.Win.C1Ribbon.VisualStyle.Office2007Black;
             // 
@@ -92,11 +92,11 @@ namespace CpMinervaDesktop
             // 
             this.ribbonQat1.Name = "ribbonQat1";
             // 
-            // ribbonTab1
+            // tabCatalogos
             // 
-            this.ribbonTab1.Groups.Add(this.ribbonGroup1);
-            this.ribbonTab1.Name = "ribbonTab1";
-            this.ribbonTab1.Text = "Catálogos";
+            this.tabCatalogos.Groups.Add(this.ribbonGroup1);
+            this.tabCatalogos.Name = "tabCatalogos";
+            this.tabCatalogos.Text = "Catálogos";
             // 
             // ribbonGroup1
             // 
@@ -132,11 +132,11 @@ namespace CpMinervaDesktop
             this.btnCaCliente.Text = "Clientes";
             this.btnCaCliente.ToolTip = "Gestión de Clientes";
             // 
-            // ribbonTab2
+            // tabMovimientos
             // 
-            this.ribbonTab2.Groups.Add(this.ribbonGroup2);
-            this.ribbonTab2.Name = "ribbonTab2";
-            this.ribbonTab2.Text = "Movimientos";
+            this.tabMovimientos.Groups.Add(this.ribbonGroup2);
+            this.tabMovimientos.Name = "tabMovimientos";
+            this.tabMovimientos.Text = "Movimientos";
             // 
             // ribbonGroup2
             // 
@@ -162,11 +162,11 @@ namespace CpMinervaDesktop
             this.btnMoCaja.Text = "Caja";
             this.btnMoCaja.ToolTip = "Atención en Cajas";
             // 
-            // ribbonTab3
+            // tabAdministracion
             // 
-            this.ribbonTab3.Groups.Add(this.ribbonGroup3);
-            this.ribbonTab3.Name = "ribbonTab3";
-            this.ribbonTab3.Text = "Administración";
+            this.tabAdministracion.Groups.Add(this.ribbonGroup3);
+            this.tabAdministracion.Name = "tabAdministracion";
+            this.tabAdministracion.Text = "Administración";
             // 
             // ribbonGroup3
             // 
@@ -192,11 +192,11 @@ namespace CpMinervaDesktop
             this.btnAdEmpleado.Text = "Empleados";
             this.btnAdEmpleado.ToolTip = "Gestión de Empleados";
             // 
-            // ribbonTab4
+            // tabAyuda
             // 
-            this.ribbonTab4.Groups.Add(this.ribbonGroup4);
-            this.ribbonTab4.Name = "ribbonTab4";
-            this.ribbonTab4.Text = "Ayuda";
+            this.tabAyuda.Groups.Add(this.ribbonGroup4);
+            this.tabAyuda.Name = "tabAyuda";
+            this.tabAyuda.Text = "Ayuda";
             // 
             // ribbonGroup4
             // 
@@ -230,7 +230,7 @@ namespace CpMinervaDesktop
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CpMinervaDesktop.Properties.Resources.principal;
             this.pictureBox1.Location = new System.Drawing.Point(0, 194);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1077, 434);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,11 +245,13 @@ namespace CpMinervaDesktop
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Principal - Minerva :::";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -264,21 +266,21 @@ namespace CpMinervaDesktop
         private C1.Win.C1Ribbon.RibbonBottomToolBar ribbonBottomToolBar1;
         private C1.Win.C1Ribbon.RibbonConfigToolBar ribbonConfigToolBar1;
         private C1.Win.C1Ribbon.RibbonQat ribbonQat1;
-        private C1.Win.C1Ribbon.RibbonTab ribbonTab1;
+        private C1.Win.C1Ribbon.RibbonTab tabCatalogos;
         private C1.Win.C1Ribbon.RibbonGroup ribbonGroup1;
         private C1.Win.C1Ribbon.RibbonTopToolBar ribbonTopToolBar1;
         private C1.Win.C1Ribbon.RibbonButton btnCaProducto;
         private C1.Win.C1Ribbon.RibbonButton btnCaProveedor;
         private C1.Win.C1Ribbon.RibbonButton btnCaCliente;
-        private C1.Win.C1Ribbon.RibbonTab ribbonTab2;
+        private C1.Win.C1Ribbon.RibbonTab tabMovimientos;
         private C1.Win.C1Ribbon.RibbonGroup ribbonGroup2;
         private C1.Win.C1Ribbon.RibbonButton btnMoCompra;
         private C1.Win.C1Ribbon.RibbonButton btnMoCaja;
-        private C1.Win.C1Ribbon.RibbonTab ribbonTab3;
+        private C1.Win.C1Ribbon.RibbonTab tabAdministracion;
         private C1.Win.C1Ribbon.RibbonGroup ribbonGroup3;
         private C1.Win.C1Ribbon.RibbonButton btnAdUsuario;
         private C1.Win.C1Ribbon.RibbonButton btnAdEmpleado;
-        private C1.Win.C1Ribbon.RibbonTab ribbonTab4;
+        private C1.Win.C1Ribbon.RibbonTab tabAyuda;
         private C1.Win.C1Ribbon.RibbonGroup ribbonGroup4;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton8;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton9;

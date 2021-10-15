@@ -12,14 +12,26 @@ namespace CpMinervaDesktop
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        FrmAutenticacion frmAutenticacion;
+        public FrmPrincipal(FrmAutenticacion frmAutenticacion)
         {
             InitializeComponent();
+            this.frmAutenticacion = frmAutenticacion;
         }
 
         private void btnCaProducto_Click(object sender, EventArgs e)
         {
             new FrmProducto().ShowDialog();
+        }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmAutenticacion.Visible = true;
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            tabAdministracion.Visible = Utils.empleado.cargo == "Administrador";
         }
     }
 }

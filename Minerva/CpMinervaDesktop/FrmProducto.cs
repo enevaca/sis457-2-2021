@@ -126,7 +126,7 @@ namespace CpMinervaDesktop
                 producto.saldo = Convert.ToDecimal(txtSaldo.Text);
                 if (esNuevo)
                 {
-                    producto.usuarioRegistro = "nvaca";
+                    producto.usuarioRegistro = Utils.usuario.usuario;
                     producto.fechaRegistro = DateTime.Now;
                     producto.registroActivo = true;
                     ProductoCln.insertar(producto);
@@ -151,7 +151,7 @@ namespace CpMinervaDesktop
             DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar el producto {descripcion}?", "::: Mensaje - Minerva :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(dialog == DialogResult.Yes)
             {
-                ProductoCln.eliminar(id, "nvaca");
+                ProductoCln.eliminar(id, Utils.usuario.usuario);
                 listar();
                 MessageBox.Show("Registro eliminado corractamente", "::: Mensaje - Minerva :::", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
