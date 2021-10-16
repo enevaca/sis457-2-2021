@@ -33,5 +33,10 @@ namespace CpMinervaDesktop
         {
             tabAdministracion.Visible = Utils.empleado.cargo == "Administrador";
         }
+
+        private void btnAdEmpleado_Click(object sender, EventArgs e)
+        {
+            new FrmEmpleado().ShowDialog();
+        }
     }
 }

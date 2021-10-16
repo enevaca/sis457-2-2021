@@ -65,10 +65,9 @@ namespace CpMinervaDesktop
             this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(1077, 194);
+            this.c1Ribbon1.Size = new System.Drawing.Size(808, 156);
             this.c1Ribbon1.Tabs.Add(this.tabCatalogos);
             this.c1Ribbon1.Tabs.Add(this.tabMovimientos);
             this.c1Ribbon1.Tabs.Add(this.tabAdministracion);
@@ -191,6 +190,7 @@ namespace CpMinervaDesktop
             this.btnAdEmpleado.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnAdEmpleado.SmallImage")));
             this.btnAdEmpleado.Text = "Empleados";
             this.btnAdEmpleado.ToolTip = "Gestión de Empleados";
+            this.btnAdEmpleado.Click += new System.EventHandler(this.btnAdEmpleado_Click);
             // 
             // tabAyuda
             // 
@@ -229,23 +229,21 @@ namespace CpMinervaDesktop
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CpMinervaDesktop.Properties.Resources.principal;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 194);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 156);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1077, 434);
+            this.pictureBox1.Size = new System.Drawing.Size(808, 354);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 628);
+            this.ClientSize = new System.Drawing.Size(808, 510);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Principal - Minerva :::";

@@ -55,6 +55,14 @@ namespace ClnMinerva
             }
         }
 
+        public static Empleado validar(string cedulaIdentidad)
+        {
+            using (var db = new MinervaEntities())
+            {
+                return db.Empleado.Where(x => x.cedulaIdentidad == cedulaIdentidad).FirstOrDefault();
+            }
+        }
+
         public static List<Empleado> listar(string parametro) 
         {
             using (var db = new MinervaEntities())

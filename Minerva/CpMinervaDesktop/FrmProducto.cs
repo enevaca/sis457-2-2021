@@ -1,13 +1,7 @@
 ﻿using CadMinerva;
 using ClnMinerva;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CpMinervaDesktop
@@ -65,6 +59,7 @@ namespace CpMinervaDesktop
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
             btnEditar.Enabled = lista.Count > 0;
             btnEliminar.Enabled = lista.Count > 0;
+            if (lista.Count > 0) dgvLista.Rows[0].Cells["codigo"].Selected = true;
         }
 
         private void cargarDatos()
