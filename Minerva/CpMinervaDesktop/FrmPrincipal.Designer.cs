@@ -152,6 +152,7 @@ namespace CpMinervaDesktop
             this.btnMoCompra.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnMoCompra.SmallImage")));
             this.btnMoCompra.Text = "Comprar";
             this.btnMoCompra.ToolTip = "Registrar una compra";
+            this.btnMoCompra.Click += new System.EventHandler(this.btnMoCompra_Click);
             // 
             // btnMoCaja
             // 

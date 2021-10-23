@@ -38,5 +38,10 @@ namespace CpMinervaDesktop
         {
             new FrmEmpleado().ShowDialog();
         }
+
+        private void btnMoCompra_Click(object sender, EventArgs e)
+        {
+            new FrmCompra().ShowDialog();
+        }
     }
 }
