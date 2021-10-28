@@ -54,6 +54,9 @@ namespace CpMinervaDesktop
             this.ribbonButton9 = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ribbonTab1 = new C1.Win.C1Ribbon.RibbonTab();
+            this.ribbonGroup5 = new C1.Win.C1Ribbon.RibbonGroup();
+            this.btnReProductos = new C1.Win.C1Ribbon.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +73,7 @@ namespace CpMinervaDesktop
             this.c1Ribbon1.Size = new System.Drawing.Size(808, 156);
             this.c1Ribbon1.Tabs.Add(this.tabCatalogos);
             this.c1Ribbon1.Tabs.Add(this.tabMovimientos);
+            this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.tabAdministracion);
             this.c1Ribbon1.Tabs.Add(this.tabAyuda);
             this.c1Ribbon1.TopToolBarHolder = this.ribbonTopToolBar1;
@@ -237,6 +241,27 @@ namespace CpMinervaDesktop
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // ribbonTab1
+            // 
+            this.ribbonTab1.Groups.Add(this.ribbonGroup5);
+            this.ribbonTab1.Name = "ribbonTab1";
+            this.ribbonTab1.Text = "Reportes";
+            // 
+            // ribbonGroup5
+            // 
+            this.ribbonGroup5.Items.Add(this.btnReProductos);
+            this.ribbonGroup5.Name = "ribbonGroup5";
+            this.ribbonGroup5.Text = "Lista de Reportes";
+            // 
+            // btnReProductos
+            // 
+            this.btnReProductos.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReProductos.LargeImage")));
+            this.btnReProductos.Name = "btnReProductos";
+            this.btnReProductos.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnReProductos.SmallImage")));
+            this.btnReProductos.Text = "Productos";
+            this.btnReProductos.ToolTip = "Reporte de Productos";
+            this.btnReProductos.Click += new System.EventHandler(this.btnReProductos_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +309,9 @@ namespace CpMinervaDesktop
         private C1.Win.C1Ribbon.RibbonButton ribbonButton8;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private C1.Win.C1Ribbon.RibbonTab ribbonTab1;
+        private C1.Win.C1Ribbon.RibbonGroup ribbonGroup5;
+        private C1.Win.C1Ribbon.RibbonButton btnReProductos;
     }
 }
 

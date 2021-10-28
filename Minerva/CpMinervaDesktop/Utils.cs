@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 using CadMinerva;
+using System.Windows.Forms;
+using System.Globalization;
 
 namespace CpMinervaDesktop
 {
@@ -13,6 +15,7 @@ namespace CpMinervaDesktop
     {
         public static Usuario usuario;
         public static Empleado empleado;
+		public static bool notPaste = true;
 
         public static string Encrypt(string text)
         {
@@ -35,5 +38,74 @@ namespace CpMinervaDesktop
             byte[] encryptedData = ms.ToArray();
             return encryptedData;
         }
-    }
+
+		/// <summary>
+		/// Validar sólo números en el evento KeyPress
+		/// </summary>
+		public static void onlyNumbers(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == 22 && notPaste) e.Handled = true; //Deshabilitar Ctrl + V (Pegar)
+			else
+			{
+				if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+				else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+				else e.Handled = true;
+			}
+		}
+
+		/// <summary>
+		/// Validar sólo números enteros o decimales en el evento KeyPress
+		/// </summary>
+		public static void onlyDecimals(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == 22 && notPaste) e.Handled = true; //Deshabilitar Ctrl + V (Pegar)
+			else
+			{
+				char separtor = Char.Parse(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
+				char group = Char.Parse(CultureInfo.CurrentCulture.NumberFormat.NumberGroupSeparator);
+				int points = ((Control)sender).Text.Split(separtor).Count();
+
+				if (group.Equals(e.KeyChar)) e.KeyChar = separtor;
+
+				if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+				else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+				else if (separtor.Equals(e.KeyChar) && points <= 1) e.Handled = false;
+				else e.Handled = true;
+				((Control)sender).Text = ((Control)sender).Text.Replace(group, separtor);
+			}
+		}
+
+		/// <summary>
+		/// Validar sólo letras en el evento KeyPress
+		/// </summary>
+		public static void onlyLetters(object sender, KeyPressEventArgs e)
+		{
+			if (Char.IsLetter(e.KeyChar)) e.Handled = false;
+			else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+			else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+			else e.Handled = true;
+		}
+
+		/// <summary>
+		/// Validar ni números ni letras en el evento KeyPress
+		/// </summary>
+		public static void notNumbersLetters(object sender, KeyPressEventArgs e)
+		{
+			if (!(Char.IsLetterOrDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar))) e.Handled = false;
+			else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+			else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+			else if (Char.IsSymbol(e.KeyChar)) e.Handled = false;
+			else if ((int)e.KeyChar <= 47) e.Handled = false;
+			else e.Handled = true;
+		}
+
+
+		public static void notButtonRight(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Right)
+			{
+				//if (isMsgTxtMouseDown) MessageBox.Show(msgTxtMouseDown);
+			}
+		}
+	}
 }
