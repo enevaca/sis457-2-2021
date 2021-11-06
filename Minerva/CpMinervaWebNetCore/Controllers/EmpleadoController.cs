@@ -1,27 +1,30 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CpMinervaWebNetCore.Models;
 
 namespace CpMinervaWebNetCore.Controllers
 {
-    public class ProveedorController : Controller
+    public class EmpleadoController : Controller
     {
         private readonly MinervaContext _context;
 
-        public ProveedorController(MinervaContext context)
+        public EmpleadoController(MinervaContext context)
         {
             _context = context;
         }
 
-        // GET: Proveedor
+        // GET: Empleado
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Proveedors.Where(x => x.RegistroActivo.Value).ToListAsync());
+            return View(await _context.Empleados.ToListAsync());
         }
 
-        // GET: Proveedor/Details/5
+        // GET: Empleado/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -29,39 +32,39 @@ namespace CpMinervaWebNetCore.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedors
+            var empleado = await _context.Empleados
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (proveedor == null)
+            if (empleado == null)
             {
                 return NotFound();
             }
 
-            return View(proveedor);
+            return View(empleado);
         }
 
-        // GET: Proveedor/Create
+        // GET: Empleado/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Proveedor/Create
+        // POST: Empleado/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nit,RazonSocial,Direccion,Telefono,Representante,UsuarioRegistro,FechaRegistro,RegistroActivo")] Proveedor proveedor)
+        public async Task<IActionResult> Create([Bind("Id,CedulaIdentidad,Nombres,Paterno,Materno,FechaNacimiento,Direccion,Celular,Cargo,UsuarioRegistro,FechaRegistro,RegistroActivo")] Empleado empleado)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(proveedor);
+                _context.Add(empleado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(proveedor);
+            return View(empleado);
         }
 
-        // GET: Proveedor/Edit/5
+        // GET: Empleado/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -69,22 +72,22 @@ namespace CpMinervaWebNetCore.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedors.FindAsync(id);
-            if (proveedor == null)
+            var empleado = await _context.Empleados.FindAsync(id);
+            if (empleado == null)
             {
                 return NotFound();
             }
-            return View(proveedor);
+            return View(empleado);
         }
 
-        // POST: Proveedor/Edit/5
+        // POST: Empleado/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nit,RazonSocial,Direccion,Telefono,Representante,UsuarioRegistro,FechaRegistro,RegistroActivo")] Proveedor proveedor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CedulaIdentidad,Nombres,Paterno,Materno,FechaNacimiento,Direccion,Celular,Cargo,UsuarioRegistro,FechaRegistro,RegistroActivo")] Empleado empleado)
         {
-            if (id != proveedor.Id)
+            if (id != empleado.Id)
             {
                 return NotFound();
             }
@@ -93,12 +96,12 @@ namespace CpMinervaWebNetCore.Controllers
             {
                 try
                 {
-                    _context.Update(proveedor);
+                    _context.Update(empleado);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProveedorExists(proveedor.Id))
+                    if (!EmpleadoExists(empleado.Id))
                     {
                         return NotFound();
                     }
@@ -109,10 +112,10 @@ namespace CpMinervaWebNetCore.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(proveedor);
+            return View(empleado);
         }
 
-        // GET: Proveedor/Delete/5
+        // GET: Empleado/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -120,33 +123,30 @@ namespace CpMinervaWebNetCore.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedors
+            var empleado = await _context.Empleados
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (proveedor == null)
+            if (empleado == null)
             {
                 return NotFound();
             }
 
-            return View(proveedor);
+            return View(empleado);
         }
 
-        // POST: Proveedor/Delete/5
+        // POST: Empleado/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var proveedor = await _context.Proveedors.FindAsync(id);
-            //_context.Proveedors.Remove(proveedor);
-            proveedor.RegistroActivo = false;
-            //proveedor.UsuarioRegistro = Usuario de session
-            _context.Update(proveedor);
+            var empleado = await _context.Empleados.FindAsync(id);
+            _context.Empleados.Remove(empleado);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProveedorExists(int id)
+        private bool EmpleadoExists(int id)
         {
-            return _context.Proveedors.Any(e => e.Id == id);
+            return _context.Empleados.Any(e => e.Id == id);
         }
     }
 }
