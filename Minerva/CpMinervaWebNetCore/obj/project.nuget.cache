@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fKrQ4rOOXDzzxSFqwRkLnXhPSZh/6OA1k0SccC0gA2BcrTiOmXlm0k5gqh6nd9ayLra6jpBPZYdQi9joQoYfjA==",
+  "dgSpecHash": "eBmyXdMkeQTcLyoLNqEt3dDjdQIAxWncUXssT22JZryF50ikO17Uo50dLAi8vdvwOKFTMNcggOzQfOnNUJQNiw==",
   "success": true,
-  "projectFilePath": "D:\\informatica\\sis457-2-2020\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
+  "projectFilePath": "D:\\informatica\\sis457-2-2021\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Noel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Noel\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

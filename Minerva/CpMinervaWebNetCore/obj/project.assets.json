@@ -7156,11 +7156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\informatica\\sis457-2-2020\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
+      "projectUniqueName": "D:\\informatica\\sis457-2-2021\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
       "projectName": "CpMinervaWebNetCore",
-      "projectPath": "D:\\informatica\\sis457-2-2020\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
+      "projectPath": "D:\\informatica\\sis457-2-2021\\Minerva\\CpMinervaWebNetCore\\CpMinervaWebNetCore.csproj",
       "packagesPath": "C:\\Users\\Noel\\.nuget\\packages\\",
-      "outputPath": "D:\\informatica\\sis457-2-2020\\Minerva\\CpMinervaWebNetCore\\obj\\",
+      "outputPath": "D:\\informatica\\sis457-2-2021\\Minerva\\CpMinervaWebNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
