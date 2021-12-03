@@ -24,15 +24,33 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacidad</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Empleado" asp-action="Index">Empleados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Usuario" asp-action="Index">Usuarios</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Empleado" asp-action="Index">Empleados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                            </li>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Hola @User.Identity.Name</a>
+                            </li>
+                            <li class="nav-item">
+                                @await Html.PartialAsync("_LogoutPartial.cshtml")
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

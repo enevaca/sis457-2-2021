@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CpMinervaWebNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CpMinervaWebNetCore.Controllers
 {
+    [Authorize]
     public class ProveedorController : Controller
     {
         private readonly MinervaContext _context;
